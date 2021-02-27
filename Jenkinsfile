@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('Build') {
+        stage('Node') {
           agent {
-            node {
-              label 'node'
+            docker {
+              image 'node'
             }
 
           }
