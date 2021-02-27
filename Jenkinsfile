@@ -18,7 +18,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'docker build -t image1 .'
       }
