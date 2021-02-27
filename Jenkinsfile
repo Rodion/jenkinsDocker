@@ -1,20 +1,27 @@
 pipeline {
-  agent {
-    docker {
-      image 'docker'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       parallel {
         stage('Build') {
+          agent {
+            node {
+              label 'node'
+            }
+
+          }
           steps {
             sh 'node --version'
           }
         }
 
         stage('Docker') {
+          agent {
+            docker {
+              image 'docker'
+            }
+
+          }
           steps {
             sh 'docker --version'
           }
