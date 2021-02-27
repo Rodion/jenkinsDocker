@@ -1,9 +1,26 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('build') {
+    stage('Build') {
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'node --version'
+          }
+        }
+
+        stage('Docker') {
+          steps {
+            sh 'docker --version'
+          }
+        }
+
+      }
+    }
+
+    stage('') {
       steps {
-        sh 'npm install'
+        sh 'docker build -t image1 .'
       }
     }
 
