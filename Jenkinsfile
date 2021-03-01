@@ -30,23 +30,5 @@ pipeline {
       }
     }
 
-    stage('Image') {
-      agent {
-        node {
-          label 'Image'
-        }
-
-      }
-      steps {
-        sh '''checkout scm
-
-def customImage = docker.build("image1")
-customImage.inside {
-   sh \'make test\'
-}
-'''
-      }
-    }
-
   }
 }
