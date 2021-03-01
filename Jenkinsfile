@@ -33,7 +33,7 @@ pipeline {
     stage('Image') {
       agent {
         node {
-          label 'image1'
+          label 'Image'
         }
 
       }
