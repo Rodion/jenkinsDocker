@@ -40,11 +40,10 @@ pipeline {
       steps {
         sh '''checkout scm
 
-    def customImage = docker.build("image1")
-
-    customImage.inside {
-        sh \'make test\'
-    }
+def customImage = docker.build("image1")
+customImage.inside {
+   sh \'make test\'
+}
 '''
       }
     }
