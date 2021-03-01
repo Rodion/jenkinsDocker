@@ -34,7 +34,12 @@ pipeline {
       steps {
         sh '''checkout scm
 
-docker build -t image1 .'''
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+
+    customImage.inside {
+        sh \'make test\'
+    }
+'''
       }
     }
 
