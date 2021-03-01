@@ -32,8 +32,8 @@ pipeline {
 
     stage('Image') {
       agent {
-        docker {
-          image 'image1'
+        dockerfile {
+          filename 'dockerfile'
         }
 
       }
