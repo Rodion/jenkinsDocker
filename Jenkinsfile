@@ -30,5 +30,23 @@ pipeline {
       }
     }
 
+    stage('image') {
+      agent {
+        node {
+          label 'image'
+        }
+
+      }
+      steps {
+        sh ''' checkout scm
+
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
+
+    customImage.inside {
+        sh \'make test\'
+    }'''
+      }
+    }
+
   }
 }
