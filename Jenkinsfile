@@ -31,6 +31,12 @@ pipeline {
     }
 
     stage('Image') {
+      agent {
+        docker {
+          image 'image1'
+        }
+
+      }
       steps {
         sh '''checkout scm
 
