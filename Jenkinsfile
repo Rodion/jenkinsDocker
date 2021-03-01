@@ -32,7 +32,9 @@ pipeline {
 
     stage('Image') {
       steps {
-        sh 'docker build -t image1 .'
+        sh '''checkout scm
+
+docker build -t image1 .'''
       }
     }
 
