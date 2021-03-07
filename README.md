@@ -30,6 +30,3 @@ docker-compose up -d --build
 # - Port 8888   exposes the web interface 
 HOST_PORT_WEB=8888
 ```
-
----
-:arrow_forward: [02-Download-Jenkins-CLI](../02-Download-Jenkins-CLI)
