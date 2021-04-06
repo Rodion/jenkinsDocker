@@ -3,7 +3,7 @@
 ----
 # Jenkins Labs - Run Jenkins Server
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/nirgeier/JenkinsLabs)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/Rodion/jenkinsDocker)
 
 ### **<kbd>CTRL</kbd> + click to open in new window**   
 
